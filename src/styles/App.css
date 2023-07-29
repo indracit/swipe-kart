@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');  
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+.sidebar-back{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.sidebar-visi{
+    visibility: hidden;
+}
+
+.sidebar-visi-anim{
+    animation-duration: 600ms;
+    animation-name: side-visi-anim;
+}
+
+@keyframes sidebar-visi-anim{
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.sidebar-back::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(1px);
+    background-color: rgba(0, 0, 0, .3);
+    /* z-index: -1; */
+}
+
+.sidebar-app {
+    position: absolute;
+    top: -1px;
+    z-index: 1;
+    transform: translate(-100%, 0);
+
+}
+
+.slide-out{
+    animation-duration: 600ms;
+    animation-name: slide-out;
+}
+
+@keyframes slide-out{
+    0%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+.sidebar-app-click{
+    position: absolute;
+    top: -50px;
+    z-index: 1;
+    transform: translate(0, 0);
+    
+}
+
+.slide-in{
+    animation-duration: 400ms;
+    animation-name: slide-in;
+}
+
+@keyframes slide-in{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+

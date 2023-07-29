@@ -1,0 +1,18 @@
+.products{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-content:space-evenly;
+    /* align-items: center; */
+}
+
+.products div{
+    background-color: cadetblue;
+    height: 70px;
+    width: 200px;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
