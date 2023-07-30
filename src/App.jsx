@@ -3,8 +3,11 @@ import './styles/App.css'
 import Sidebar from "./components/Sidebar"
 import { useState } from "react"
 import { Routes,Route } from "react-router-dom";
-import Product from "./pages/Product";
+// import Product from "./pages/Product";
+import React from "react";
+import Home from "./skeletons/Home";
 
+const Product = React.lazy(()=> import('./pages/Product'))
 
 const App = () => {
   
@@ -12,6 +15,7 @@ const App = () => {
   const [ slideout, setSlideOut] = useState(true);
   return (
     <div className="app">
+
 
       <Header collapse={collapse}  setCollapse={setCollapse} setSlideOut={setSlideOut} />
 
@@ -21,11 +25,11 @@ const App = () => {
       </div>
       </div>
 
+      <React.Suspense fallback={<Home/>}>
       <Routes>
         <Route path="/" element={ <Product/>}/>
       </Routes>
-
-
+      </React.Suspense>
     </div>
   )
 }
