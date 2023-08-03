@@ -16,9 +16,9 @@
     width: 150px;
     background-color: rgb(199, 199, 199);
 }
-.text-card{
+.text-card {
     display: grid;
-    /* height: 60vh; */
+    height: 50vh;
     grid-template-columns: auto auto;
     justify-content: center;
     align-content:space-evenly;

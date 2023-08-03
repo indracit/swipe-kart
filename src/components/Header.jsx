@@ -14,7 +14,6 @@ const Header = ({collapse, setCollapse , setSlideOut}) => {
     <div>
     <RiShoppingCart2Line style={{fontSize:'18px'}}/>
     </div>
-    
     </div>
     )
 }
