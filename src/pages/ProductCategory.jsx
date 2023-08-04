@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import '../styles/products.css'
 import Proskeleton from "../skeletons/Proskeleton"
+import PropTypes from 'prop-types'
 
 const ProductCategory = ({category}) => {
 
@@ -24,11 +25,15 @@ const ProductCategory = ({category}) => {
         <p>{item.title}</p>
         <div className="cart"> 
         <p>${item.price}</p>
-        <p>Add to cart</p>
+        <p onClick={()=>console.log(1)}>Add to cart</p>
         </div>
         </div>)}
     </div>
     )
+}
+
+ProductCategory.propTypes = {
+    category: PropTypes.string
 }
 
 export default ProductCategory
