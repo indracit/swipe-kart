@@ -1,6 +1,9 @@
 import '../styles/Header.css';
 import {RiShoppingCart2Line} from 'react-icons/ri'
 import {IoMenu} from 'react-icons/io5'
+import PropTypes  from 'prop-types';
+
+
 
 const Header = ({collapse, setCollapse , setSlideOut}) => {
     return (
@@ -16,6 +19,12 @@ const Header = ({collapse, setCollapse , setSlideOut}) => {
     </div>
     </div>
     )
+}
+
+Header.propTypes = {
+    collapse : PropTypes.bool,
+    setCollapse : PropTypes.func,
+    setSlideOut : PropTypes.func
 }
 
 export default Header
