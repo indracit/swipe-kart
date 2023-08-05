@@ -6,11 +6,16 @@ const Cart = () => {
 
     return (
         <div className="cart-page">
-            {cart.map((item)=> <div key={item.id}> 
+            <h3>Shopping Cart</h3>
+            <div className="cart-content">
+            {cart.map((item)=> <div key={item.id} className="cart-item"> 
                 <p>{item.title}</p>
+                <div>
                 <p>{item.quantity}</p>
                 <p>remove</p>
-            </div>)}
+                </div>
+            </div>)} 
+            </div>
         </div>
     )
 }
