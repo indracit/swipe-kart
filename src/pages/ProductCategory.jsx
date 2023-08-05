@@ -2,11 +2,14 @@ import { useEffect, useState } from "react"
 import '../styles/products.css'
 import Proskeleton from "../skeletons/Proskeleton"
 import PropTypes from 'prop-types'
+import { useDispatch } from "react-redux"
+import { increment } from "../features/cart/cartSlice";
 
 const ProductCategory = ({category}) => {
 
     const [products,setProducts] = useState([])
     const [loading, setLoading] = useState(true);
+    const dispatch = useDispatch();
 
     useEffect(()=>{
         setLoading(true);
@@ -25,7 +28,7 @@ const ProductCategory = ({category}) => {
         <p>{item.title}</p>
         <div className="cart"> 
         <p>${item.price}</p>
-        <p onClick={()=>console.log(1)}>Add to cart</p>
+        <p onClick={()=>dispatch(increment(item))}>Add to cart</p>
         </div>
         </div>)}
     </div>

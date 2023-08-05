@@ -6,6 +6,7 @@ import { Routes,Route } from "react-router-dom";
 // import Product from "./pages/Product";
 import React from "react";
 import Home from "./skeletons/Home";
+import Cart from "./pages/Cart";
 
 const Product = React.lazy(()=> import('./pages/Product'))
 
@@ -28,6 +29,7 @@ const App = () => {
       <React.Suspense fallback={<Home/>}>
       <Routes>
         <Route path="/" element={ <Product/>}/>
+      <Route path="/cart" element={ <Cart/>}/>
       </Routes>
       </React.Suspense>
     </div>
