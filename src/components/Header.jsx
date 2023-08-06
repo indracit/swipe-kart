@@ -13,10 +13,13 @@ const Header = ({collapse, setCollapse , setSlideOut}) => {
     const [cartValue, setCartValue] = useState(0);
 
     useEffect(()=>{
-        console.log(cart);
+        // console.log(cart);
         if(cart.length){
             let count =  cart.reduce((total,item)=> total + item.quantity,0)
             setCartValue(count)
+        }
+        else{
+            setCartValue(0)
         }
 
     },[cart])

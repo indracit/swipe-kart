@@ -28,7 +28,7 @@ const ProductCategory = ({category}) => {
         <p>{item.title}</p>
         <div className="cart"> 
         <p>${item.price}</p>
-        <p onClick={()=>dispatch(increment(item))}>Add to cart</p>
+        <button onClick={()=>dispatch(increment(item))}>Add to cart</button>
         </div>
         </div>)}
     </div>

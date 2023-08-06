@@ -72,3 +72,15 @@
         align-content:space-evenly;
     }
 }
+.product-category button{
+    width: 90px;
+    padding: 2px;
+    border-color: aliceblue;
+    cursor: pointer;
+    background-color: cadetblue;
+    color: aliceblue;
+}
+
+.product-category button:hover{
+    background-color: rgb(118, 157, 158);
+}
